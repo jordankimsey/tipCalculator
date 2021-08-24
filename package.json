@@ -1,0 +1,23 @@
+{
+  "name": "tip-calculator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordankimsey/tipCalculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordankimsey/tipCalculator/issues"
+  },
+  "homepage": "https://github.com/jordankimsey/tipCalculator#readme",
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
+}

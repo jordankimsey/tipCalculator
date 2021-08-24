@@ -1,44 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="./images/logo.svg" alt="" srcset="" />
+        </div>
 
-  Bill
+        <div class="card">
+            <div class="card-left">
+                <!--Total bill-->
+                <div class="bill">
+                    <p class="calculatorTitle">Bill</p>
+                    <div class="inputIcon">
+                        <img src="./images/icon-dollar.svg" alt="" />
+                        <input
+                            class=""
+                            type="number"
+                            name="billAmount"
+                            id="billAmount"
+                            placeholder="0.00"
+                        />
+                    </div>
+                </div>
+                <!--Tip amount-->
+                <div class="tipPercent">
+                    <p class="calculatorTitle pad">Select Tip %</p>
+                    <div class="selector" id="tipSelector">
+                        <button
+                            class="percentageButton selected"
+                            name="percentage"
+                            value=""
+                        >
+                            5%
+                        </button>
+                        <button
+                            class="percentageButton"
+                            name="percentage"
+                            value=""
+                        >
+                            10%
+                        </button>
+                        <button
+                            class="percentageButton"
+                            name="percentage"
+                            value=""
+                        >
+                            15%
+                        </button>
+                        <button
+                            class="percentageButton"
+                            name="percentage"
+                            value=""
+                        >
+                            25%
+                        </button>
+                        <button
+                            class="percentageButton"
+                            name="percentage"
+                            value=""
+                        >
+                            50%
+                        </button>
+                        <!--Custom input need to set up function-->
+                        <input type="number" placeholder="Custom"
+                        name="percentage" id="customTip/
+                        onInput="currentTip(this.value)">
+                    </div>
+                </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+                <!--Number of people-->
+                <div class="numberOfPeople">
+                    <p class="calculatorTitle pad">Number Of People</p>
+                    <div class="inputIcon">
+                        <img src="./images/icon-person.svg" alt="" />
+                        <input type="number" placeholder="0" class="" />
+                    </div>
+                </div>
+            </div>
 
-  Number of People
+            <div class="tipCard">
+                <p>
+                    Tip Amount <br />
+                    <span>/ person</span>
+                </p>
+                <div class="price" id="tipPerPerson">$ 0.00</div>
+                <p>
+                    Total <br />
+                    <span>/ person</span>
+                </p>
+                <div class="price" id="totalPerPerson">$ 0.00</div>
+                <!--Set up function-->
+                <button
+                    class="button"
+                    id="reset"
+                    onclick="handleClickReset(this.classList)"
+                >
+                    RESET
+                </button>
+            </div>
+        </div>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+        <script src="/app.js"></script>
+    </body>
 </html>
