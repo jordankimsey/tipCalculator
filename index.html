@@ -43,6 +43,7 @@
                             name="billAmount"
                             id="billAmount"
                             placeholder="0.00"
+                            oninput="currentBill(this.value)"
                         />
                     </div>
                 </div>
@@ -51,43 +52,43 @@
                     <p class="calculatorTitle pad">Select Tip %</p>
                     <div class="selector" id="tipSelector">
                         <button
-                            class="percentageButton selected"
+                            class="percentageButton"
                             name="percentage"
-                            value=""
+                            value="5"
                         >
                             5%
                         </button>
                         <button
                             class="percentageButton"
                             name="percentage"
-                            value=""
+                            value="10"
                         >
                             10%
                         </button>
                         <button
                             class="percentageButton"
                             name="percentage"
-                            value=""
+                            value="15"
                         >
                             15%
                         </button>
                         <button
                             class="percentageButton"
                             name="percentage"
-                            value=""
+                            value="25"
                         >
                             25%
                         </button>
                         <button
                             class="percentageButton"
                             name="percentage"
-                            value=""
+                            value="50"
                         >
                             50%
                         </button>
                         <!--Custom input need to set up function-->
                         <input type="number" placeholder="Custom"
-                        name="percentage" id="customTip/
+                        name="percentage" id="customTip"
                         onInput="currentTip(this.value)">
                     </div>
                 </div>
@@ -97,7 +98,7 @@
                     <p class="calculatorTitle pad">Number Of People</p>
                     <div class="inputIcon">
                         <img src="./images/icon-person.svg" alt="" />
-                        <input type="number" placeholder="0" class="" />
+                        <input type="number" placeholder="0" id="numberOfPeople" oninput="people(this.value)" />
                     </div>
                 </div>
             </div>
@@ -114,14 +115,16 @@
                 </p>
                 <div class="price" id="totalPerPerson">$ 0.00</div>
                 <!--Set up function-->
-                <button
-                    class="button"
-                    id="reset"
-                    onclick="handleClickReset(this.classList)"
-                >
-                    RESET
-                </button>
-            </div>
+                  <button
+                  class="button"
+                  id="reset"
+                  onclick="handleClickReset(this.classList)"
+              >
+                  RESET
+              </button>
+                </div>
+               
+    
         </div>
 
         <div class="attribution">
@@ -130,7 +133,7 @@
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            >. Coded by <a href="#">Isaac Jordan Kimsey</a>.
         </div>
         <script src="/app.js"></script>
     </body>

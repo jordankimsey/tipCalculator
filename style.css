@@ -113,6 +113,7 @@ input.active {
 }
 
 .percentageButton {
+    cursor: pointer;
     background-color: var(--very-dark-cyan);
     color: white;
     font-family: inherit;
@@ -149,6 +150,7 @@ input.active {
 }
 
 .tipCard button {
+    cursor: pointer;
     grid-column: 1/-1;
     width: 100%;
     padding: 10px 5px;
@@ -159,6 +161,13 @@ input.active {
     font-weight: 700;   
     font-size: 20px;
     color: var(--very-dark-cyan);
+    opacity: .95;
+}
+
+.tipCard button:hover {
+    background-color: var(--strong-cyan);
+    opacity: .9;
+    
 }
 
 .tipCard .price {
