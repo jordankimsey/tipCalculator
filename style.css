@@ -2,15 +2,15 @@
 /* - Mobile: 375px
 - Desktop: 1440px */
 
-:root{
---strong-cyan: hsl(172, 67%, 45%);
- /* ### Neutral */
---very-dark-cyan: hsl(183, 100%, 15%);
---dark-grayish-cyan: hsl(186, 14%, 43%);
---dark-grayish-cyan: hsl(184, 14%, 56%);
---light-grayish-cyan: hsl(185, 41%, 84%);
---light-grayish-cyan: hsl(189, 41%, 97%);
---white: hsl(0, 0%, 100%);
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    /* ### Neutral */
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
 }
 
 /* - Font size (form inputs): 24px */
@@ -23,9 +23,8 @@
 }
 
 body {
-    background-color: hsl(185, 41%, 84%);;
+    background-color: hsl(185, 41%, 84%);
     display: flex;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -42,27 +41,27 @@ input {
 }
 
 input::placeholder {
-    color:var(--very-dark-cyan); 
+    color: var(--very-dark-cyan);
     font-weight: 700;
     font-size: 24px;
     opacity: 0.7;
 }
 
-input.error{
+input.error {
     border: 2px solid #f44336;
     border-radius: 5px;
 }
 
-.calculatorTitle span.error{
-   display: inline-flex;
-   align-items: flex-end;
-   justify-content: flex-end;
+.calculatorTitle span.error {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     color: #f44336;
     text-align: right;
 }
 
 input.active {
-    border: 2px solid #04AA6D;
+    border: 2px solid #04aa6d;
     border-radius: 5px;
 }
 
@@ -100,8 +99,8 @@ input.active {
 .card {
     background-color: white;
     border-radius: 25px 25px 0 0;
-    width: 100%;
-    height: 100vh;
+    width: 99%;
+    max-height: 100vh;
     padding: 25px 50px;
 }
 
@@ -158,20 +157,76 @@ input.active {
     border-radius: 5px;
     background-color: var(--strong-cyan);
     font-family: inherit;
-    font-weight: 700;   
+    font-weight: 700;
     font-size: 20px;
     color: var(--very-dark-cyan);
-    opacity: .95;
+    opacity: 0.95;
+    height: 45px;
 }
 
 .tipCard button:hover {
     background-color: var(--strong-cyan);
-    opacity: .9;
-    
+    opacity: 0.9;
 }
 
 .tipCard .price {
     color: var(--strong-cyan);
     font-size: 24px;
     text-align: right;
+}
+
+@media only screen and (min-width: 500px) {
+    .card {
+        width: 75%;
+        height: 80vh;
+        padding-bottom: 50px;
+    }
+
+    .tipCard {
+        padding-bottom: 10px;
+        height: 35%;
+    }
+}
+
+@media only screen and (min-width: 740px) {
+    body {
+        /* width: 80%;
+        margin: auto; */
+    }
+
+    .card {
+        border-radius: 20px;
+        display: flex;
+        height: 100%;
+        padding: 15px 20px;
+        max-width: 750px;
+    }
+
+    .card-left {
+        height: 100%;
+        padding-right: 20px;
+        align-items: center;
+    }
+
+    .tipCard {
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;
+        height: 100%;
+        /* max-height: 350px; */
+        position: relative;
+    }
+
+    .tipCard button {
+        position: absolute;
+        bottom: 12px;
+    }
+
+    .selector {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 16px;
+    }
 }
