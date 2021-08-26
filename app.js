@@ -61,13 +61,22 @@ tipPercent.forEach(tip => {
             select.classList.remove('selected')
         })
         //adds selected class on tip amount
-        tip.classList.add('selected');
+        // tip.classList.add('selected');
+        e.target.classList.add("selected")
         customTip.value = "";
         currentTipValue = e.target.value;
         amountPerPerson(currentBillAmount, currentTipValue, currentNumberOfPeople);
         //need to update global current tip value
-         currentTipValue = tip.value;
+        //  currentTipValue = tip.value;
     })
+})
+
+customTip.addEventListener('keydown', (e) => {
+    if (Number(e.key) || e.key === "0") {
+        document.querySelectorAll('.selected').forEach(button => {
+            button.classList.remove('selected');
+        }) 
+    } 
 })
 
 reset.addEventListener('click', (e) => {
@@ -76,9 +85,11 @@ reset.addEventListener('click', (e) => {
     currentTipValue = '';
     billAmount.value = '';
     numberOfPeople.value = '';
+    customTip.value = '';
 
     tipPerPerson.innerHTML = `$0.00`;
     totalPerPerson.innerHTML = `$0.00`;
+    // customTip.innerHTML = `Custom`;
 
     tipPercent.forEach(tip => {
         document.querySelectorAll('.selected').forEach(select => {
