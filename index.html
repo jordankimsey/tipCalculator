@@ -87,9 +87,13 @@
                             50%
                         </button>
                         <!--Custom input need to set up function-->
-                        <input type="number" placeholder="Custom"
-                        name="percentage" id="customTip"
-                        onInput="currentTip(this.value)">
+                        <input
+                            type="number"
+                            placeholder="Custom"
+                            name="percentage"
+                            id="customTip"
+                            onInput="currentTip(this.value)"
+                        />
                     </div>
                 </div>
 
@@ -98,7 +102,12 @@
                     <p class="calculatorTitle pad">Number Of People</p>
                     <div class="inputIcon">
                         <img src="./images/icon-person.svg" alt="" />
-                        <input type="number" placeholder="0" id="numberOfPeople" oninput="people(this.value)" />
+                        <input
+                            type="number"
+                            placeholder="0"
+                            id="numberOfPeople"
+                            oninput="people(this.value)"
+                        />
                     </div>
                 </div>
             </div>
@@ -115,16 +124,8 @@
                 </p>
                 <div class="price" id="totalPerPerson">$ 0.00</div>
                 <!--Set up function-->
-                  <button
-                  class="button"
-                  id="reset"
-        
-              >
-                  RESET
-              </button>
-                </div>
-               
-    
+                <button class="button" id="reset">RESET</button>
+            </div>
         </div>
 
         <div class="attribution">
